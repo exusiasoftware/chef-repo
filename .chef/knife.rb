@@ -5,5 +5,5 @@ log_level                :info
 log_location             STDOUT
 node_name                "admin"
 client_key               "#{current_dir}/admin.pem"
-chef_server_url          "https://localhost/organizations/rahmingtech"
+chef_server_url          "https://chefsrv.rahmingtech.com/organizations/rahmingtech"
 cookbook_path            ["#{current_dir}/../cookbooks"]
