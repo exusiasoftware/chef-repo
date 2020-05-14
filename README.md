@@ -32,7 +32,3 @@ Now that you have the chef-repo ready to go, check out [Learn Chef](https://lear
 
 
 
-knife upload cookbooks/bcf_nginx
- knife node show web-node1
- knife node run_list add web-node1 'recipe[bcf_nginx::default]'
- knife node run_list set web-node1 bcf_nginx
