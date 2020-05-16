@@ -1,0 +1,7 @@
+I, [2020-05-16T12:40:20.644165 #9119]  INFO -- default-ubuntu-1804: -----> Destroying <default-ubuntu-1804>...
+I, [2020-05-16T12:40:24.437005 #9119]  INFO -- default-ubuntu-1804: ==> vagrant: A new version of Vagrant is available: 2.2.9 (installed version: 2.2.6)!
+I, [2020-05-16T12:40:24.437123 #9119]  INFO -- default-ubuntu-1804: ==> vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html
+I, [2020-05-16T12:40:24.437247 #9119]  INFO -- default-ubuntu-1804: 
+I, [2020-05-16T12:40:25.964871 #9119]  INFO -- default-ubuntu-1804: ==> default: VM not created. Moving on...
+I, [2020-05-16T12:40:26.001753 #9119]  INFO -- default-ubuntu-1804: Vagrant instance <default-ubuntu-1804> destroyed.
+I, [2020-05-16T12:40:26.002657 #9119]  INFO -- default-ubuntu-1804: Finished destroying <default-ubuntu-1804> (0m5.36s).
