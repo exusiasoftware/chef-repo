@@ -1,3 +1,60 @@
-I, [2020-05-16T12:40:18.891686 #9119]  INFO -- Kitchen: -----> Starting Test Kitchen (v2.3.4)
-I, [2020-05-16T12:40:20.644097 #9119]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1804>...
-I, [2020-05-16T12:40:26.036039 #9119]  INFO -- Kitchen: -----> Test Kitchen is finished. (0m7.14s)
+I, [2020-05-17T14:45:25.003683 #13707]  INFO -- Kitchen: -----> Starting Test Kitchen (v2.3.4)
+I, [2020-05-17T14:45:26.646173 #13707]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu-1804>
+I, [2020-05-17T14:45:26.646400 #13707]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1804>...
+I, [2020-05-17T14:45:26.647421 #13707]  INFO -- Kitchen: -----> Testing <default-ubuntu-1804>
+I, [2020-05-17T14:45:26.647555 #13707]  INFO -- Kitchen: -----> Creating <default-ubuntu-1804>...
+I, [2020-05-17T14:45:26.803019 #13707]  INFO -- Kitchen: Sending build context to Docker daemon  82.94kB
+I, [2020-05-17T14:45:26.897870 #13707]  INFO -- Kitchen: Step 1/17 : FROM ubuntu:18.04
+I, [2020-05-17T14:45:26.898142 #13707]  INFO -- Kitchen:  ---> c3c304cb4f22
+I, [2020-05-17T14:45:26.898195 #13707]  INFO -- Kitchen: Step 2/17 : RUN [ ! -f "/sbin/initctl" ] || dpkg-divert --local --rename --add /sbin/initctl && ln -sf /bin/true /sbin/initctl
+I, [2020-05-17T14:45:26.898718 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.898792 #13707]  INFO -- Kitchen:  ---> 968afcff96da
+I, [2020-05-17T14:45:26.898832 #13707]  INFO -- Kitchen: Step 3/17 : ENV DEBIAN_FRONTEND noninteractive
+I, [2020-05-17T14:45:26.899821 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.899875 #13707]  INFO -- Kitchen:  ---> 6c09b329cd52
+I, [2020-05-17T14:45:26.899903 #13707]  INFO -- Kitchen: Step 4/17 : ENV container docker
+I, [2020-05-17T14:45:26.901076 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.902019 #13707]  INFO -- Kitchen:  ---> 9997300800a4
+I, [2020-05-17T14:45:26.902068 #13707]  INFO -- Kitchen: Step 5/17 : RUN apt-get update
+I, [2020-05-17T14:45:26.902837 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.903236 #13707]  INFO -- Kitchen:  ---> a37e879f66f4
+I, [2020-05-17T14:45:26.903278 #13707]  INFO -- Kitchen: Step 6/17 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2020-05-17T14:45:26.904365 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.904735 #13707]  INFO -- Kitchen:  ---> a989c84d3cd4
+I, [2020-05-17T14:45:26.904782 #13707]  INFO -- Kitchen: Step 7/17 : RUN if ! getent passwd kitchen; then                   useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;                 fi
+I, [2020-05-17T14:45:26.905829 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.905876 #13707]  INFO -- Kitchen:  ---> 41506776eaf5
+I, [2020-05-17T14:45:26.905907 #13707]  INFO -- Kitchen: Step 8/17 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2020-05-17T14:45:26.907090 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.907147 #13707]  INFO -- Kitchen:  ---> b8dc76c4fe30
+I, [2020-05-17T14:45:26.907177 #13707]  INFO -- Kitchen: Step 9/17 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2020-05-17T14:45:26.908307 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.908369 #13707]  INFO -- Kitchen:  ---> 5720c7498e32
+I, [2020-05-17T14:45:26.908400 #13707]  INFO -- Kitchen: Step 10/17 : RUN mkdir -p /home/kitchen/.ssh
+I, [2020-05-17T14:45:26.911655 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.911726 #13707]  INFO -- Kitchen:  ---> 1c0f8b83914c
+I, [2020-05-17T14:45:26.911754 #13707]  INFO -- Kitchen: Step 11/17 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2020-05-17T14:45:26.912437 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.912475 #13707]  INFO -- Kitchen:  ---> ce2e2dfe7598
+I, [2020-05-17T14:45:26.912503 #13707]  INFO -- Kitchen: Step 12/17 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2020-05-17T14:45:26.913619 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.913686 #13707]  INFO -- Kitchen:  ---> 7883bfa2f804
+I, [2020-05-17T14:45:26.913724 #13707]  INFO -- Kitchen: Step 13/17 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2020-05-17T14:45:26.915041 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.915098 #13707]  INFO -- Kitchen:  ---> 51a346c096b1
+I, [2020-05-17T14:45:26.915127 #13707]  INFO -- Kitchen: Step 14/17 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2020-05-17T14:45:26.916305 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.916368 #13707]  INFO -- Kitchen:  ---> e10d45a0a097
+I, [2020-05-17T14:45:26.916398 #13707]  INFO -- Kitchen: Step 15/17 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2020-05-17T14:45:26.920497 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.920586 #13707]  INFO -- Kitchen:  ---> 19ef0bb40b1b
+I, [2020-05-17T14:45:26.920621 #13707]  INFO -- Kitchen: Step 16/17 : RUN mkdir -p /run/sshd
+I, [2020-05-17T14:45:26.924581 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.924665 #13707]  INFO -- Kitchen:  ---> 01f53660a8f5
+I, [2020-05-17T14:45:26.924697 #13707]  INFO -- Kitchen: Step 17/17 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQCpztHdT4LxVJjLknWi63AuHQ45G3xFQVfeu1ECUu2ZXpIGsKpNnFhmsL9lY9pwlaPihpfuCPOV8efUMmlv4gYQqfkHH96odt\+XwEVQ0yufHSI6wcrJV4qEDSlYWz15rGGKcShJgclJHKNpSArV1jfY3WLCX2fO1kHBazSzNdvF9/3EFuI\+tvh/NgUliysx6VZUBEENwGZxcxZq0JIsqR8bEd44mLjliMrdCN8DvWf01COiDg3IWJRsigHMFwwBaIICGpwQxTjGzR3HG4XyOnkEtNnYI\+8N6qcpECv6uy7Ojo3ABkXoIXGXfVgL1yq2oyb75//8ABELAUe\+V7vw7iZz\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2020-05-17T14:45:26.924721 #13707]  INFO -- Kitchen:  ---> Using cache
+I, [2020-05-17T14:45:26.924810 #13707]  INFO -- Kitchen:  ---> 21bec6fc2b42
+I, [2020-05-17T14:45:26.927151 #13707]  INFO -- Kitchen: Successfully built 21bec6fc2b42
+I, [2020-05-17T14:45:27.221753 #13707]  INFO -- Kitchen: cbf2f8393cf02dfe1395992d615cb31e02de3dd2b008fe52c52aff34de09e325
+I, [2020-05-17T14:45:27.848823 #13707]  INFO -- Kitchen: 0.0.0.0:32772
+I, [2020-05-17T14:45:31.100838 #13707]  INFO -- Kitchen: -----> Converging <default-ubuntu-1804>...

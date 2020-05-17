@@ -1,7 +1,46 @@
-I, [2020-05-16T12:40:20.644165 #9119]  INFO -- default-ubuntu-1804: -----> Destroying <default-ubuntu-1804>...
-I, [2020-05-16T12:40:24.437005 #9119]  INFO -- default-ubuntu-1804: ==> vagrant: A new version of Vagrant is available: 2.2.9 (installed version: 2.2.6)!
-I, [2020-05-16T12:40:24.437123 #9119]  INFO -- default-ubuntu-1804: ==> vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html
-I, [2020-05-16T12:40:24.437247 #9119]  INFO -- default-ubuntu-1804: 
-I, [2020-05-16T12:40:25.964871 #9119]  INFO -- default-ubuntu-1804: ==> default: VM not created. Moving on...
-I, [2020-05-16T12:40:26.001753 #9119]  INFO -- default-ubuntu-1804: Vagrant instance <default-ubuntu-1804> destroyed.
-I, [2020-05-16T12:40:26.002657 #9119]  INFO -- default-ubuntu-1804: Finished destroying <default-ubuntu-1804> (0m5.36s).
+I, [2020-05-17T14:45:26.646252 #13707]  INFO -- default-ubuntu-1804: -----> Cleaning up any prior instances of <default-ubuntu-1804>
+I, [2020-05-17T14:45:26.646437 #13707]  INFO -- default-ubuntu-1804: -----> Destroying <default-ubuntu-1804>...
+I, [2020-05-17T14:45:26.647126 #13707]  INFO -- default-ubuntu-1804: Finished destroying <default-ubuntu-1804> (0m0.00s).
+I, [2020-05-17T14:45:26.647467 #13707]  INFO -- default-ubuntu-1804: -----> Testing <default-ubuntu-1804>
+I, [2020-05-17T14:45:26.647581 #13707]  INFO -- default-ubuntu-1804: -----> Creating <default-ubuntu-1804>...
+I, [2020-05-17T14:45:27.878970 #13707]  INFO -- default-ubuntu-1804: Waiting for SSH service on localhost:32772, retrying in 3 seconds
+I, [2020-05-17T14:45:31.099494 #13707]  INFO -- default-ubuntu-1804: [SSH] Established
+I, [2020-05-17T14:45:31.100736 #13707]  INFO -- default-ubuntu-1804: Finished creating <default-ubuntu-1804> (0m4.45s).
+I, [2020-05-17T14:45:31.100868 #13707]  INFO -- default-ubuntu-1804: -----> Converging <default-ubuntu-1804>...
+I, [2020-05-17T14:45:31.102688 #13707]  INFO -- default-ubuntu-1804: Preparing files for transfer
+I, [2020-05-17T14:45:31.102860 #13707]  INFO -- default-ubuntu-1804: Installing cookbooks for Policyfile /Users/brianrahming/chef-repo/cookbooks/exs_mean_stack/Policyfile.rb using `chef install`
+I, [2020-05-17T14:45:32.553584 #13707]  INFO -- default-ubuntu-1804: Installing cookbooks from lock
+I, [2020-05-17T14:45:32.554575 #13707]  INFO -- default-ubuntu-1804: Installing exs_mean_stack 0.1.0
+I, [2020-05-17T14:45:32.590532 #13707]  INFO -- default-ubuntu-1804: Preparing dna.json
+I, [2020-05-17T14:45:32.591162 #13707]  INFO -- default-ubuntu-1804: Exporting cookbook dependencies from Policyfile /var/folders/54/_0fmmmv179bff9qztmnlvbs80000gp/T/default-ubuntu-1804-sandbox-20200517-13707-1z9wed...
+I, [2020-05-17T14:45:34.976706 #13707]  INFO -- default-ubuntu-1804: Exported policy 'exs_mean_stack' to /var/folders/54/_0fmmmv179bff9qztmnlvbs80000gp/T/default-ubuntu-1804-sandbox-20200517-13707-1z9wed
+I, [2020-05-17T14:45:34.976795 #13707]  INFO -- default-ubuntu-1804: 
+I, [2020-05-17T14:45:34.976821 #13707]  INFO -- default-ubuntu-1804: To converge this system with the exported policy, run:
+I, [2020-05-17T14:45:34.976845 #13707]  INFO -- default-ubuntu-1804:   cd /var/folders/54/_0fmmmv179bff9qztmnlvbs80000gp/T/default-ubuntu-1804-sandbox-20200517-13707-1z9wed
+I, [2020-05-17T14:45:34.976870 #13707]  INFO -- default-ubuntu-1804:   chef-client -z
+I, [2020-05-17T14:45:34.995668 #13707]  INFO -- default-ubuntu-1804: Removing non-cookbook files before transfer
+I, [2020-05-17T14:45:34.996678 #13707]  INFO -- default-ubuntu-1804: Preparing validation.pem
+I, [2020-05-17T14:45:34.997287 #13707]  INFO -- default-ubuntu-1804: Preparing client.rb
+I, [2020-05-17T14:45:35.300917 #13707]  INFO -- default-ubuntu-1804: ubuntu 18.04 x86_64
+I, [2020-05-17T14:45:35.301146 #13707]  INFO -- default-ubuntu-1804: Getting information for chef stable 15 for ubuntu...
+I, [2020-05-17T14:45:35.301187 #13707]  INFO -- default-ubuntu-1804: downloading https://omnitruck.chef.io/stable/chef/metadata?v=15&p=ubuntu&pv=18.04&m=x86_64
+I, [2020-05-17T14:45:35.301235 #13707]  INFO -- default-ubuntu-1804:   to file /tmp/install.sh.17/metadata.txt
+I, [2020-05-17T14:45:35.321198 #13707]  INFO -- default-ubuntu-1804: trying wget...
+I, [2020-05-17T14:45:35.928167 #13707]  INFO -- default-ubuntu-1804: sha1	34ee9aa925ba89fab798989e4f03390b8fc915dc
+I, [2020-05-17T14:45:35.928744 #13707]  INFO -- default-ubuntu-1804: sha256	57622d6a6dbf786dd6c829afe09f389b2b742365be19d6cca35ac8c708fa8214
+I, [2020-05-17T14:45:35.929175 #13707]  INFO -- default-ubuntu-1804: url	https://packages.chef.io/files/stable/chef/15.10.12/ubuntu/18.04/chef_15.10.12-1_amd64.deb
+I, [2020-05-17T14:45:35.930944 #13707]  INFO -- default-ubuntu-1804: version	15.10.12
+I, [2020-05-17T14:45:35.932853 #13707]  INFO -- default-ubuntu-1804: downloaded metadata file looks valid...
+I, [2020-05-17T14:45:36.039232 #13707]  INFO -- default-ubuntu-1804: downloading https://packages.chef.io/files/stable/chef/15.10.12/ubuntu/18.04/chef_15.10.12-1_amd64.deb
+I, [2020-05-17T14:45:36.039321 #13707]  INFO -- default-ubuntu-1804:   to file /tmp/install.sh.17/chef_15.10.12-1_amd64.deb
+I, [2020-05-17T14:45:36.040087 #13707]  INFO -- default-ubuntu-1804: trying wget...
+I, [2020-05-17T14:45:38.993778 #13707]  INFO -- default-ubuntu-1804: Comparing checksum with sha256sum...
+I, [2020-05-17T14:45:39.189548 #13707]  INFO -- default-ubuntu-1804: Installing chef 15
+I, [2020-05-17T14:45:39.189617 #13707]  INFO -- default-ubuntu-1804: installing with dpkg...
+I, [2020-05-17T14:45:39.461652 #13707]  INFO -- default-ubuntu-1804: Selecting previously unselected package chef.
+I, [2020-05-17T14:45:39.497913 #13707]  INFO -- default-ubuntu-1804: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10175 files and directories currently installed.)
+I, [2020-05-17T14:45:39.499338 #13707]  INFO -- default-ubuntu-1804: Preparing to unpack .../chef_15.10.12-1_amd64.deb ...
+I, [2020-05-17T14:45:39.505168 #13707]  INFO -- default-ubuntu-1804: Unpacking chef (15.10.12-1) ...
+I, [2020-05-17T14:45:46.226859 #13707]  INFO -- default-ubuntu-1804: Setting up chef (15.10.12-1) ...
+I, [2020-05-17T14:45:46.387544 #13707]  INFO -- default-ubuntu-1804: Thank you for installing Chef Infra Client! For help getting started visit https://learn.chef.io
+I, [2020-05-17T14:45:46.605824 #13707]  INFO -- default-ubuntu-1804: Transferring files to <default-ubuntu-1804>
