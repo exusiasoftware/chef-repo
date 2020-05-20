@@ -3,17 +3,25 @@
 # Recipe:: nginx
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
-server_name = 'node.rahmingtech.com'
+
 server_ip = 'localhost'
 server_port = '8080'
+server_name = 'node.rahmingtech.com'
 
 package 'nginx'
- 
-template '/etc/nginx/conf.d/javaspring.conf' do
-    source 'javaspring.conf.erb'
+
+template '/etc/nginx/conf.d/node.rahmingtech.com.conf' do
+    source 'node.rahmingtech.com.conf.erb'
     action :create 
-    variables(servername: server_name, ipaddress: server_ip, port: server_port) 
+    variables(ipaddress: server_ip, port: server_port) 
 end
+
+template '/usr/share/nginx/html/index.html' do
+    source 'index.html.erb'
+    action :create 
+    variables(server_name: server_ip) 
+end
+
 
 service 'nginx' do
     action [:enable, :start]
