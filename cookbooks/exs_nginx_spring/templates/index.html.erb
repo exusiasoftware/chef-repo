@@ -116,7 +116,7 @@
       var finalResponse = "";
       var div = document.getElementById( 'updateUser' );
       div.style.visibility = 'hidden';  
-      var remoteServer = <%= @server_name %>;
+      var remoteServer = "http://" + <%= @server_name %> + "/customer-api/v1/customer/name/";
       
       function searchCustomer() {
           var customerName = document.getElementById("search").value;
